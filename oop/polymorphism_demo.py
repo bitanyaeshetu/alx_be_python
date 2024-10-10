@@ -16,7 +16,22 @@ class Rectangle(Shape):
 
 class Circle(Shape):
     def __init__(self, radius):
-        self.radius = radius  # Correctly initializing the radius attribute
+        self.radius = radius  # Initializing the radius attribute
 
     def area(self):
-        return
+        return math.pi * (self.radius ** 2)  # Area of circle using radius with exponentiation
+
+def main():
+    # Create instances of Rectangle and Circle
+    rectangle = Rectangle(5, 3)  # Length 5, Width 3
+    circle = Circle(4)            # Radius 4
+
+    # List of shapes
+    shapes = [rectangle, circle]
+
+    # Calculate and print areas
+    for shape in shapes:
+        print(f"The area is: {shape.area()}")
+
+if __name__ == "__main__":
+    main()
