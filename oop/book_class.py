@@ -6,12 +6,13 @@ class Book:
 
     def __str__(self):
         # Human-readable representation
-        return f"'{self.title}' by {self.author} ({self.year})"
+        return f"{self.title} by {self.author}, published in {self.year}"
 
     def __repr__(self):
-        # Unambiguous, often useful for debugging
-        return f"Book(title='{self.title}', author='{self.author}', year={self.year})"
+        # Unambiguous representation for debugging
+        return f"Book('{self.title}', '{self.author}', {self.year})"
 
     def __del__(self):
         # Called when the object is deleted
-        print(f"Book '{self.title}' is being deleted.")
+        print(f"Deleting {self.title}")
+
