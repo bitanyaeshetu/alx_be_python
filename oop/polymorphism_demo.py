@@ -14,4 +14,5 @@ class Rectangle(Shape):
     def area(self):
         return self.length * self.width  # Area of rectangle
 
-class Ci
+class Circle(Shape):
+    def __init_
