@@ -15,4 +15,8 @@ class Rectangle(Shape):
         return self.length * self.width  # Area of rectangle
 
 class Circle(Shape):
-    def __init_
+    def __init__(self, radius):
+        self.radius = radius  # Correctly initializing the radius attribute
+
+    def area(self):
+        return
