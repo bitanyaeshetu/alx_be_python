@@ -11,16 +11,16 @@ def main():
     time_bound = input("Is it time-bound? (yes/no): ").lower()
 
     # Initialize reminder message
-    reminder_message = f"Note: '{task}' is a {priority} priority task."
+    reminder_message = f"'{task}' is a {priority} priority task."
 
     # Use Match Case to determine action based on priority
     match priority:
         case "high":
-            reminder_message += " That requires immediate attention today!"
+            reminder_message = f"Reminder: {reminder_message} That requires immediate attention today!"
         case "medium":
-            reminder_message += " Consider completing it soon."
+            reminder_message = f"Reminder: {reminder_message} Consider completing it soon."
         case "low":
-            reminder_message += " Consider completing it when you have free time."
+            reminder_message = f"Reminder: {reminder_message} Consider completing it when you have free time."
         case _:
             reminder_message = "Invalid priority level. Please enter high, medium, or low."
 
